@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <meta name="theme-color" content="#070B14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Lumora Sort</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./assets/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <section class="screen active" id="home">
+      <div class="topbar">
+        <div class="pill">💛 <span id="coins-home">0</span></div>
+        <div class="pill">❤ <span id="lives-home">5/5</span> · <span id="life-timer">повні</span></div>
+      </div>
+      <div class="hero">
+        <div class="logo">LUMORA</div>
+        <div class="tag">Розлий світло. Ще один раз.</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><span>рівень</span><strong id="stat-level">1</strong></div>
+        <div class="stat"><span>перемоги</span><strong id="stat-wins">0</strong></div>
+        <div class="stat"><span>монети</span><strong id="stat-coins">80</strong></div>
+      </div>
+      <div class="menu">
+        <button class="btn btn-primary" id="btn-play"><span id="play-label">Рівень 1</span></button>
+        <button class="btn btn-pink" id="btn-daily"><span id="daily-label">Щоденний виклик</span></button>
+        <button class="btn btn-ghost" id="btn-levels" data-i="levels">Рівні</button>
+        <button class="btn btn-ghost" id="btn-shop" data-i="shop">Магазин</button>
+        <button class="btn btn-ghost" id="btn-settings" data-i="settings">Налаштування</button>
+      </div>
+      <div class="ad-banner" id="ad-home">AD · banner 320×50</div>
+    </section>
+    <section class="screen" id="game">
+      <div class="hud">
+        <button class="icon-btn" id="btn-back">✕</button>
+        <div class="title-sm" id="level-title">Рівень 1</div>
+        <div class="pill">💛 <span id="g-coins">0</span></div>
+      </div>
+      <div class="board" id="board"></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="btn-undo">↩ <span id="g-undos">3</span></button>
+        <button class="btn btn-ghost" id="btn-hint">💡 40</button>
+        <button class="btn btn-primary" id="btn-adhint">▶ 💡</button>
+      </div>
+      <div class="ad-banner on" id="ad-game">AD · banner</div>
+    </section>
+    <div class="modal-back" id="modal-back">
+      <div class="modal" id="modal"></div>
+    </div>
+    <div class="toast" id="toast"></div>
+  </div>
+  <script type="module" src="./js/game.js"></script>
+</body>
+</html>
