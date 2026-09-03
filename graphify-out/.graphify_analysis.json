@@ -1,0 +1,225 @@
+{
+  "communities": {
+    "0": [
+      "js_levels",
+      "js_levels_canpour",
+      "js_levels_dopour",
+      "js_levels_generatedaily",
+      "js_levels_generatelevel",
+      "js_levels_hashstring",
+      "js_levels_issolved",
+      "js_levels_mulberry32",
+      "js_levels_palette",
+      "js_levels_pouramount",
+      "js_levels_reversepour",
+      "js_levels_topcolor"
+    ],
+    "1": [
+      "manifest",
+      "manifest_background_color",
+      "manifest_description",
+      "manifest_display",
+      "manifest_icons",
+      "manifest_name",
+      "manifest_orientation",
+      "manifest_short_name",
+      "manifest_start_url",
+      "manifest_theme_color"
+    ],
+    "2": [
+      "js_game_hint",
+      "js_game_openmodal",
+      "js_game_purchase",
+      "js_game_renderboard",
+      "js_game_save",
+      "js_game_toast",
+      "js_game_undo",
+      "js_game_updategamehud"
+    ],
+    "3": [
+      "js_game_boot",
+      "js_game_loselife",
+      "js_game_nextlifelabel",
+      "js_game_quitlevel",
+      "js_game_refilllives",
+      "js_game_renderhome",
+      "js_game_showscreen"
+    ],
+    "4": [
+      "js_game_beep",
+      "js_game_buzz",
+      "js_game_ontube",
+      "js_game_shake",
+      "js_game_spark",
+      "js_levels_clonetubes"
+    ],
+    "5": [
+      "js_game_onwin",
+      "js_monetization",
+      "js_monetization_buyproduct",
+      "js_monetization_products",
+      "js_monetization_shouldshowinterstitial",
+      "js_monetization_simulatead"
+    ],
+    "6": [
+      "js_game",
+      "js_game_closemodal",
+      "js_game_defaultstate",
+      "js_game_load",
+      "js_game_state"
+    ],
+    "7": [
+      "js_game_applylang",
+      "js_game_bind",
+      "js_game_startlevel",
+      "js_game_t",
+      "js_game_today"
+    ],
+    "8": [
+      "sw",
+      "sw_assets"
+    ]
+  },
+  "cohesion": {
+    "0": 0.30303030303030304,
+    "1": 0.2,
+    "2": 0.5714285714285714,
+    "3": 0.5238095238095238,
+    "4": 0.4,
+    "5": 0.4,
+    "6": 0.5,
+    "7": 0.6,
+    "8": 1.0
+  },
+  "gods": [
+    {
+      "id": "js_game_openmodal",
+      "label": "openModal()",
+      "degree": 16
+    },
+    {
+      "id": "js_game_ontube",
+      "label": "onTube()",
+      "degree": 13
+    },
+    {
+      "id": "js_game_startlevel",
+      "label": "startLevel()",
+      "degree": 12
+    },
+    {
+      "id": "js_game_t",
+      "label": "t()",
+      "degree": 11
+    },
+    {
+      "id": "js_game_renderhome",
+      "label": "renderHome()",
+      "degree": 10
+    },
+    {
+      "id": "js_game_onwin",
+      "label": "onWin()",
+      "degree": 10
+    },
+    {
+      "id": "js_game_hint",
+      "label": "hint()",
+      "degree": 9
+    },
+    {
+      "id": "js_game_purchase",
+      "label": "purchase()",
+      "degree": 9
+    },
+    {
+      "id": "js_game_bind",
+      "label": "bind()",
+      "degree": 9
+    },
+    {
+      "id": "js_levels_generatelevel",
+      "label": "generateLevel()",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "hint()",
+      "target": "canPour()",
+      "source_files": [
+        "js/game.js",
+        "js/levels.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "onTube()",
+      "target": "canPour()",
+      "source_files": [
+        "js/game.js",
+        "js/levels.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "onTube()",
+      "target": "doPour()",
+      "source_files": [
+        "js/game.js",
+        "js/levels.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "startLevel()",
+      "target": "generateDaily()",
+      "source_files": [
+        "js/game.js",
+        "js/levels.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "startLevel()",
+      "target": "generateLevel()",
+      "source_files": [
+        "js/game.js",
+        "js/levels.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `generateLevel()` connect `levels.js` to `game.js`, `startLevel`?",
+      "why": "High betweenness centrality (0.036) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `onTube()` connect `onTube` to `levels.js`, `openModal`, `onWin`, `game.js`?",
+      "why": "High betweenness centrality (0.017) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `startLevel()` connect `startLevel` to `levels.js`, `openModal`, `renderHome`, `onTube`, `game.js`?",
+      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `background_color`, `description`, `display` to the rest of the system?",
+      "why": "11 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}
