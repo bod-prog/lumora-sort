@@ -1,0 +1,38 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1788454970.3240676,
+    "seen": 1788454978.6986048,
+    "ast_hash": "dbe039a15c5c2eb60e34dccc1af0cbb5",
+    "semantic_hash": "dbe039a15c5c2eb60e34dccc1af0cbb5"
+  },
+  "js/game.js": {
+    "mtime": 1788454956.7892518,
+    "seen": 1788454978.6986089,
+    "ast_hash": "4bc59615fa3bf8a7a494a2cad576e7f4",
+    "semantic_hash": "4bc59615fa3bf8a7a494a2cad576e7f4"
+  },
+  "js/levels.js": {
+    "mtime": 1788454956.7897801,
+    "seen": 1788454978.6986127,
+    "ast_hash": "0f37e915bdc119ba8e5e2c6cbd45ee72",
+    "semantic_hash": "0f37e915bdc119ba8e5e2c6cbd45ee72"
+  },
+  "js/monetization.js": {
+    "mtime": 1788454956.7897801,
+    "seen": 1788454978.698615,
+    "ast_hash": "d4ff3c1c73726a08ecf31bfacb45fb8a",
+    "semantic_hash": "d4ff3c1c73726a08ecf31bfacb45fb8a"
+  },
+  "manifest.json": {
+    "mtime": 1788454956.7897801,
+    "seen": 1788454978.698617,
+    "ast_hash": "c63ab69fa5e36c53c8a47af351cacd93",
+    "semantic_hash": "c63ab69fa5e36c53c8a47af351cacd93"
+  },
+  "sw.js": {
+    "mtime": 1788454956.7897801,
+    "seen": 1788454978.6986191,
+    "ast_hash": "b920278062fb9fc2b0ed1d8f8f698e48",
+    "semantic_hash": "b920278062fb9fc2b0ed1d8f8f698e48"
+  }
+}
